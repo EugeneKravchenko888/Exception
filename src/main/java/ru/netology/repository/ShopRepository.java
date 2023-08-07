@@ -16,9 +16,7 @@ public class ShopRepository {
      */
     private Product[] addToArray(Product[] current, Product product) {
         Product[] tmp = new Product[current.length + 1];
-        for (int i = 0; i < current.length; i++) {
-            tmp[i] = current[i];
-        }
+        System.arraycopy(current, 0, tmp, 0, current.length);
         tmp[tmp.length - 1] = product;
         return tmp;
     }
@@ -55,7 +53,7 @@ public class ShopRepository {
                     "Element with id: " + id + " not found"
             );
         }
-        }
+    }
 
     public Product findById(int id) {
         for (Product product : products) {

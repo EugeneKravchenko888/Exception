@@ -1,4 +1,5 @@
 package ru.netology;
+
 import java.util.Objects;
 
 public class Product {
@@ -25,6 +26,7 @@ public class Product {
     public int hashCode() {
         return Objects.hash(id, title, price);
     }
+
     public int getId() {
         return id;
     }
@@ -46,5 +48,5 @@ public class Product {
     }
     // геттеры + сеттеры
     // на id только геттер — пусть будет неизменяемым для товара
-  }
+}
 

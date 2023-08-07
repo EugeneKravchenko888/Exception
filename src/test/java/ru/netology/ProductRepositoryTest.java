@@ -24,7 +24,9 @@ public class ProductRepositoryTest {
 
     @Test
     public void shouldExceptionRemoveById() {
-        Assertions.assertThrows(NotFoundException.class, () -> {repo.removeById(25);});
+        Assertions.assertThrows(NotFoundException.class, () -> {
+            repo.removeById(25);
+        });
     }
 
     @Test
